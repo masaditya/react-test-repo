@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Run Autograde
-        uses: masaditya/test-autograde@v3
+        uses: masaditya/test-autograde@v6
         with : 
           run : npm run test
           who-to-greet: run
