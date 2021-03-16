@@ -16,13 +16,21 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  unit-test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Run Autograde
-        uses: masaditya/test-autograde@v6
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      # Runs a single command using the runners shell
+      - name: install dependencies
+        run: npm install
+      - name : testing
+        run: npm test 2>&1 | tee test.log
+      - name : show log file
+        run: cat test.log
+      - uses: masaditya/test-autograde@v6
         with : 
-          run : npm run test
-          who-to-greet: run
+          who-to-greet: user
+        
