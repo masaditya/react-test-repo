@@ -15,6 +15,18 @@ function App() {
         >
           Learn React
         </a>
+
+        <p>Todo List</p>
+
+        <input type="text" placeholder="input todo" name="todo_input"/>
+        <ul>
+          <li>Masak</li>
+          <li>Mencuci</li>
+          <li>Makan</li>
+        </ul>
+        <button role="button" name="submit">Add Todo</button>
+
+
       </header>
     </div>
   );
