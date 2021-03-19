@@ -27,7 +27,7 @@ jobs:
       - name: install dependencies
         run: npm install
       - name : testing
-        run: npm test a 2>&1 | tee test.log
+        run: npm run test a -- --verbose 2>&1 | tee test.log
       - name : show log file
         run: cat test.log
       - uses: masaditya/test-autograde@v7.4
