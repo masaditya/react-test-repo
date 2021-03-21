@@ -33,5 +33,5 @@ jobs:
       - uses: masaditya/test-autograde@v8
         with: 
           kelas: TI4A
-          week : 2
+          week : 1
         
