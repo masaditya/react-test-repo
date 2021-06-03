@@ -4,13 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.actrc
 # testing
 /coverage
 
 # production
 /build
-
+test.log
 # misc
 .DS_Store
 .env.local
