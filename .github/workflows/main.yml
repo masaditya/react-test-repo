@@ -30,8 +30,4 @@ jobs:
         run: npm run test -- --verbose 2>&1 | tee test.log
       - name : show log file
         run: cat test.log
-      - uses: masaditya/test-autograde@v9.2
-        with: 
-          kelas: TI4A
-          minggu-ke : 2
-        
+      - uses: masaditya/test-autograde@v10.0
